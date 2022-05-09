@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
    --green: #A2CCB6;
@@ -82,16 +81,7 @@ body {
    cursor: pointer;
 }
 
-/* .key:active,
-.key:nth-child(1):active,
-.key:nth-child(14):active,
-.key:nth-child(15):active,
-.key:nth-child(43):active,
-.key:nth-child(56):active {
-   background-color: darkgray;
-   color: black;
-   transition: ease-in-out;
-} */
+
 
 .key:nth-child(14),
 :nth-child(29) {
@@ -137,15 +127,4 @@ body {
 .key:nth-child(59) {
    width: calc(6 * (70vw / 15));
    color: darkgray;
-}
-
-@media only screen and (max-width: 768px) {
-   .key {
-      border-radius: 0;
-      border-width: 0.1px;
-   }
-
-   .textarea {
-      height: 10vh;
-   }
 }
