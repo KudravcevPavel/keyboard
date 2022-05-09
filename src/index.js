@@ -243,7 +243,14 @@ for (const key of keysArr) {
       key.innerHTML !== '▼' &&
       key.innerHTML !== '◄'
     ) {
-      key.addEventListener('click', () => (input.innerHTML += key.innerHTML));
+       key.addEventListener('click', () => (input.innerHTML += key.innerHTML));
+       key.addEventListener('click', () => {
+          key.classList.toggle('active');
+          setTimeout(() => {
+            key.classList.remove('active')
+         }, 150)
+          
+      })
     }
   }
 }
