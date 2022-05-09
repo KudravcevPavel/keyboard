@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+   --green: #A2CCB6;
+   --yellow: #FCEEB5;
+   --peach: #EE786E;
+   --off-white: #FFFFF4;
+   --active: rgb(175, 137, 180);
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: rgb(138, 141, 140);
+   font-family: Arial;
+}
+
+.textarea {
+   height: 20vh;
+   width: 69%;
+   margin-top: 10vh;
+   font-size: 30px;
+   resize: none;
+   border-radius: 10px;
+   padding-top: 10px;
+   padding-left: 10px;
+   outline: none;
+   font-family: 'Roboto Mono', monospace;
+   border: solid 8px #000000;
+   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.keyboard {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   justify-self: center;
+   width: 70vw;
+   background-color: rgb(230, 230, 230);
+   margin: 30px auto;
+   border: 3px solid #000000;
+   border-radius: 10px;
+   background: #000000;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.key {
+   width: calc(70vw / 15);
+   height: calc(70vw / 25);
+   margin: .07vw;
+   border-radius: 3px;
+   border-color: black;
+   font-weight: bold;
+   font-size: 1vw;
+   background-color: #2b2c2c;
+   color: #ffff;
+   font-family: 'Roboto Mono', monospace;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--off-white);
+   color: #000000;
+   line-height: 48px;
+   border-radius: 4px;
+}
+
+.key.active,
+.key:nth-child(15).active,
+.key:nth-child(1).active,
+.key:nth-child(14).active,
+.key:nth-child(56).active,
+.key:nth-child(43).active {
+   transform: scale(0.95);
+   background: var(--active);
+}
+
+.key:hover {
+   cursor: pointer;
+}
+
+/* .key:active,
+.key:nth-child(1):active,
+.key:nth-child(14):active,
+.key:nth-child(15):active,
+.key:nth-child(43):active,
+.key:nth-child(56):active {
+   background-color: darkgray;
+   color: black;
+   transition: ease-in-out;
+} */
+
+.key:nth-child(14),
+:nth-child(29) {
+   width: calc(1.5 * (70vw / 15));
+   background-color: var(--peach);
+   color: darkgray;
+}
+
+.key:nth-child(43) {
+   width: calc(2.5 * (70vw / 15));
+   background-color: var(--green);
+   color: darkgray;
+}
+
+.key:nth-child(56),
+:nth-child(61) {
+   width: calc(1.28 * (70vw / 15));
+   background-color: var(--green);
+   color: darkgray;
+}
+
+.key:nth-child(15) {
+   width: calc(1.5 * (70vw / 15));
+   background-color: var(--peach);
+   color: darkgray;
+}
+
+.key:nth-child(1),
+:nth-child(28),
+:nth-child(42),
+:nth-child(57),
+:nth-child(58),
+:nth-child(60),
+:nth-child(55),
+:nth-child(54),
+:nth-child(62),
+:nth-child(63),
+:nth-child(64) {
+   background-color: var(--yellow);
+   color: darkgray;
+}
+
+.key:nth-child(59) {
+   width: calc(6 * (70vw / 15));
+   color: darkgray;
+}
+
+@media only screen and (max-width: 768px) {
+   .key {
+      border-radius: 0;
+      border-width: 0.1px;
+   }
+
+   .textarea {
+      height: 10vh;
+   }
+}
